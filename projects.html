@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mingzi Xu - PROJECTS</title>
+        <meta name="author" content = "Mingzi Xu">
+        <meta name="Description" content = "projects">
+        <meta name = "keywords" content = "software developer">
+        <link rel="stylesheet" href="css/style.css" type = "text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kenia">
+        <script src="js/profile.js"> </script>
+        
+    </head>
+    <body>
+        <header>
+            <h1 id = "blink"><a href = "index.html">Mingzi Xu</a></h1>
+            <nav>
+                <div id = "navbar">
+                    <a href="index.html">HOME</a>
+                    <a href="resume.html">RESUME</a>
+                    <a href="projects.html" class="selected">PROJECTS</a>
+                    <a href="contact.html">CONTACT</a>
+                </div>
+            </nav>
+          </header>
+        <main class="maincontent">
+            <h2>Projects</h2>
+            <div id="project-container" >
+                <div id = "slides-container">
+                    <div class="project one fade">
+                        <div class="text">
+                            <h3> Project 1: UX Design</h3>
+                            <ul>
+                                <li>Completed: 2019</li>
+                                <li>A Group project of UX designfor a local small business </li>  
+                                <li>Technics: Personas, UX design, UI design, High-fidelity Wireframes, User Testing</li>
+                                <li>Software used: Adobe Suite, UXpin</li>
+
+                            </ul>
+                        </div>
+                        
+                        <img src="imgs/project01.png " alt="project 1: UX design for DART" class="imgProject">
+                    </div> 
+                    <div class="project two fade">
+                        
+                        <div class="text">
+                            <h3>Project 2: Website design and development</h3>
+                            <ul>
+                                <li>Completed: 2021</li> 
+                                <li>A personal project for Website Design and development</li> 
+                                <li>Technics: HTML,CSS, JavaScript, Graphic Design, UI Design, UX Design</li>
+                                <li>Software used: Adobe Illustrator, Adobe Dreamweaver</li>
+
+                            </ul>
+                        </div>
+                        <img src="imgs/project02.png " alt="screenshot for project 2" class="imgProject">
+                    </div> 
+                    <div class="project three fade">
+                        
+                        <div class="text">
+                        <h3>Project 3: Website Redesign and development</h3>
+                        <ul>
+                            <li>Completed: 2020</li>  
+                            <li>A real peoject for an online course redesign, including all the graphic and UX design </li>
+                            <li>Technics: HTML, CSS, Graphic Design</li>
+                            <li>Software used: Adobe Illustrator, Visual Studio Code</li>
+    
+                        </ul>
+                        </div>
+                        <img src="imgs/project03.png " alt="screenshot for project 3" class="imgProject">
+                    </div>
+                    <div class="project four fade">
+                        <div class="text">
+                        <h3>Project 4: Database Management</h3>
+                        <ul>
+                            <li>Conmpleted: 2023</li> 
+                            <li>A school projet for database management applicaton for book store inventory</li> 
+                            <li>Technics: SQL Language, relationship design</li>
+                            <li>Software used: Access, SQL server Management Studio</li>
+                        </ul></div>
+                        <img src="imgs/project04.png " alt="screenshot for project 4"  class="imgProject">
+                    </div>
+                    <button class="slidesbutton left" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="slidesbutton right" onclick="plusDivs(1)">&#10095;</button> 
+                 
+                </div>
+                       
+                <div id="display-container">
+                        <span class="dot indicator hover-color" onclick="currentDiv(1)"></span>
+                        <span class="dot indicator hover-color" onclick="currentDiv(2)"></span>
+                        <span class="dot indicator hover-color" onclick="currentDiv(3)"></span>
+                        <span class="dot indicator hover-color" onclick="currentDiv(4)"></span>
+                </div>
+            
+            </div>
+           
+
+        </main>
+
+        <footer><p>Mingzi Xu, 2023 Copyright</p></footer>
+
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+            
+            function plusDivs(n) {
+              showDivs(slideIndex += n);
+            }
+            
+            function currentDiv(n) {
+                showDivs(slideIndex = n);
+            }
+
+            function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("project");
+              var dots = document.getElementsByClassName("dot");
+              if (n > x.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = x.length}
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" current", "");
+            }
+              x[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " current";
+  
+            }
+            </script>
+    </body>
+
+</html>

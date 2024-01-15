@@ -1,0 +1,319 @@
+/*
+    Student name: Mingzi Xu
+    File name: style.html
+    date created: Sep.28th
+    Descriptiom: this is the style sheet for Assignment1
+*/
+/*1
+Set margin and padding to 0 for all of these elements
+*/
+body,h1,h2,h3,p,ul,li {
+    margin: 0px;
+    padding: 0px;
+}
+/*2. 
+set a sans-serif font for the whole page.
+*/
+* {
+    font-family: sans-serif;
+}
+/*3.
+Apply a background color, text color, and line height the body element.
+*/
+body {
+    background-color : #0f0f0f;
+    color:#f4f4f4;
+    line-height: 1.6;
+    max-width:100%;
+    margin:0.5rem auto;
+    display: block;
+    min-height: 800px;
+}
+/*4.
+Style the header element with background color, 
+text color, padding , and center-aligning the content.*/
+header {
+    background-color: rgba(0,0,0,0.5);
+    color:#fff;
+    padding: 1rem 0;
+}
+/*5.
+double font size for h1*/
+h1 {
+    font-size:5rem;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+h1 a{
+    color:white;
+    font-family: Kenia;
+    text-decoration: none; /* no underline */
+    
+}
+header, footer { position: relative; z-index: 1 }
+p, li {
+    font-size: 1.1em;
+}
+/*flashing title*/
+#blink {
+    animation: blink 5s linear infinite;
+}
+@keyframes blink {
+    25%{
+        opacity:0.5;
+    }
+    50%{
+        opacity:0.3;
+    }
+    75%{
+        opacity:0.5;
+    }
+}
+
+/*6.
+remove list bullets, display list items inline, 
+add margin between list items, 
+remove text decoration from links, and make the link text bold.*/
+header {
+    position:fixed;
+    top:0;
+    width:100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 0 12px 0;
+    background-color:rgba(0, 0, 0, 0.8);
+}
+#navbar {
+    display:table;
+    margin: 0 auto;
+    text-align:center;
+}
+#navbar a {
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    width: 25%; /* Four links of equal widths */
+}
+#navbar a:hover {
+    background-color: #670000;
+  }
+#navbar a.selected{
+    background-color:#670000;
+  }
+/*style for the main tag
+*/
+main{
+    padding: 15rem 2rem 2rem 2rem;
+    margin: 50px auto;
+    overflow-wrap: break-word;
+    max-width:1280px;
+    min-width:600px;
+}
+h2 {
+    text-align: center;
+    margin:3rem auto;
+}
+h3 {
+    text-decoration :underline;
+}
+ul#noBullet {
+    list-style-type: none;
+    text-decoration:none;
+}
+ul {
+    padding: 0.5rem 2rem 0 2rem;
+}
+section{
+    margin:1rem 0;
+    width:100%;
+}
+div {
+    margin:0.5rem 0;
+}
+
+.inline {
+    display: flex;
+    justify-content: space-between;
+}
+footer {
+    background-color:rgba(0,0,0,0.1);
+    color: #fff;
+    text-align:center;
+    padding:1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+
+/*
+detailed style for index.html
+*/
+#index {
+    margin: 200px auto;
+}
+
+#intro {
+    margin: 3rem auto;
+}
+#index h2 {
+    text-align: left;
+    padding:3rem 0;
+    font-size: 3em;
+}
+.column {
+    float: left;
+    width: 50%;
+  }
+.maincontent:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.personalimg {
+    border-radius:300px;
+    vertical-align: middle;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+}
+/*
+projects.html style details
+*/
+* {box-sizing: border-box}
+
+#slides-container {
+    max-width: 1000px;
+    position:relative;
+    margin: auto;
+    max-height:800px;
+    overflow: hidden; 
+}
+.slidesbutton {
+    color:#e4e4e4;
+    background-color: rgba(96, 96, 96, 0.5) ;
+    cursor: pointer;
+    border:none;
+    height: 3rem;
+    width: 2rem;
+}
+#display-container {
+    text-align: center;
+}
+.slidesbutton :hover {
+    background-color:#000!important;
+}
+.left {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%,-50%);
+}
+.right{
+   position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%,-50%); 
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+.current, .dot:hover {
+    background-color: #717171;
+}
+/*resize the image*/
+.imgProject{
+    vertical-align: middle;
+    width: 100%;
+    height: auto;
+}
+/* details of projects*/
+.text {
+    background-color: rgba(29, 29, 29, 0.5) ;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: left;
+    margin:0;
+  }
+
+.text ul {
+    list-style-type:none;
+  }
+/*
+contact page details
+*/
+#contact {
+    max-width:80%;
+    min-width:600px;
+    
+}
+form{
+    display: grid; 
+    width:50%;
+    margin: 0 auto;
+}
+.inputfield{
+    height:2rem;   
+}
+input{
+    
+    width:100%
+}
+.contactfield {
+    margin:0.5rem auto;
+}
+textarea {
+    width: 100%;
+    height: 150px;
+  }
+#send {
+    height:2rem;
+    width:8rem;
+    font-size: 1.5rem;
+    margin: auto;  
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        flex-basis:auto; 
+        margin:0 auto;  
+    }
+
+   #index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em auto;
+   }
+   .column {
+    width:90%;
+   }
+   #index h2, #index h3 {
+    margin:0 auto;
+    padding: 0;
+    text-align: center;
+   }
+   form {
+    width:90%;
+    margin:0 auto;
+   }
+  }

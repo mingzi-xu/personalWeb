@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mingzi Xu - CONTACT ME</title>
+    <meta name="author" content = "Mingzi Xu">
+    <meta name="Description" content = "Information">
+    <meta name = "keywords" content = "software developer">
+    <link rel="stylesheet" href="css/style.css" type = "text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kenia">
+    <script src="js/profile.js"> </script>
+    <!--<script src="profile.js"> </script>-->
+</head>
+<body>
+  <header>
+    <h1 id = "blink"><a href = "index.html">Mingzi Xu</a></h1>
+    <nav>
+      <div id = "navbar">
+          <a href="index.html">HOME</a>
+          <a href="resume.html">RESUME</a>
+          <a href="projects.html">PROJECTS</a>
+          <a href="contact.html" class="selected">CONTACT</a>
+      </div>
+  </nav>
+  </header>
+  <main id="contact" class="maincontent">
+      <h2> Contact Me</h2>
+        <form method="post" action="form.php" id="form__submit">
+          <label for = "name">Name</label>
+          <input type = "text" id = "name" class="inputfield contactfield">
+          <br>
+          <label for = "email">Email</label>
+          <input type = "text" id = "email"  class="inputfield contactfield">
+          <br>
+          <label for = "textarea">Message</label><br>
+          <textarea id = "textarea" name = "textarea" class="contactfield"></textarea>
+          <br>
+          <button id ="send" type = "submit" value = "Submit" onclick="submitForm()" class="contactfield">Submit</button>
+        </form>
+  </main>
+  <footer><p>Mingzi Xu, 2023 Copyright</p></footer>
+  <script>
+   
+ </script>
+ 
+</body>
+
+
+</html>
